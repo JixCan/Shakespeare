@@ -20,9 +20,9 @@ public class ShakespeareMod {
     public static final String MODID = "shakespeare";
     public static final String NAME = "ShakespeareMod";
     public static final String VERSION = "1.0";
-    public static KeyBinding[] keyBindings = {new KeyBinding("Включить защиту", Keyboard.KEY_RCONTROL, "Shakespeare Mod")};
+    public static KeyBinding[] keyBindings = {new KeyBinding("Р’РєР»СЋС‡РёС‚СЊ Р·Р°С‰РёС‚Сѓ", Keyboard.KEY_RCONTROL, "Shakespeare Mod")};
     public static boolean modEnabled = false;
-    public static final String prefix = "§6[§eTesla§aCraft§6] ";
+    public static final String prefix = "В§6[В§eTeslaВ§aCraftВ§6] ";
     @Mod.EventHandler
     public void preinit(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new Listener());
@@ -36,10 +36,10 @@ public class ShakespeareMod {
                 modEnabled = !modEnabled;
                 EntityPlayer player = Minecraft.getMinecraft().player;
                 if (modEnabled) {
-                    player.sendMessage(new TextComponentString(prefix + "§aЗащита от мата включена."));
+                    player.sendMessage(new TextComponentString(prefix + "В§aР—Р°С‰РёС‚Р° РѕС‚ РјР°С‚Р° РІРєР»СЋС‡РµРЅР°."));
                     player.world.playSound(player, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.PLAYERS, 1.0f, 1.0f);
                 } else {
-                    player.sendMessage(new TextComponentString(prefix + "§cЗащита от мата выключена."));
+                    player.sendMessage(new TextComponentString(prefix + "В§cР—Р°С‰РёС‚Р° РѕС‚ РјР°С‚Р° РІС‹РєР»СЋС‡РµРЅР°."));
                     player.world.playSound(player, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.PLAYERS, 1.0f, 1.0f);
                 }
             }
@@ -49,20 +49,20 @@ public class ShakespeareMod {
             if (modEnabled){
                 String originalMessage = event.getMessage();
                 String modifiedMessage = originalMessage.toLowerCase()
-                        .replaceAll("[xх][уy]й", "писюн")
-                        .replaceAll("[pрп][иi][3зz][dд][aа]", "писька")
-                        .replaceAll("[xх][уy][eеё][вВ].*", "плоховатенько")
-                        .replaceAll("[aаоo0][xх][уy][её].*", "мегахорош")
-                        .replaceAll("[eе][6бb][aа].*", "ОГО!")
-                        .replaceAll("[pрп][иi][3з][dд][eе]*.", "ёколомоне")
-                        .replaceAll("[сc][уy][кk].*", "чёрт возьми!")
-                        .replaceAll("[6бb]ля.*", "блин ")
-                        .replaceAll("[3зz][aа].[уy][pрп].*", "писька")
-                        .replaceAll("[eе][6б]л.*", "епарасете ")
-                        .replaceAll("[3зz][aа][eеё][6бb].*", "надоело это всё! ")
-                        .replaceAll("[dд][ао].[6бb][ао][её][6бb].*", "дурачок) ")
-                        .replaceAll(".*[её][6бb].*", "***")
-                        .replaceAll("[xх][eе][рp]", "хрен");
+                        .replaceAll("[xС…][Сѓy]Р№", "РїРёСЃСЋРЅ")
+                        .replaceAll("[pСЂРї][Рёi][3Р·z][dРґ][aР°]", "РїРёСЃСЊРєР°")
+                        .replaceAll("[xС…][Сѓy][eРµС‘][РІР’].*", "РїР»РѕС…РѕРІР°С‚РµРЅСЊРєРѕ")
+                        .replaceAll("[aР°Рѕo0][xС…][Сѓy][РµС‘].*", "РјРµРіР°С…РѕСЂРѕС€")
+                        .replaceAll("[eРµ][6Р±b][aР°].*", "РћР“Рћ!")
+                        .replaceAll("[pСЂРї][Рёi][3Р·][dРґ][eРµ]*.", "С‘РєРѕР»РѕРјРѕРЅРµ")
+                        .replaceAll("[СЃc][Сѓy][Рєk].*", "С‡С‘СЂС‚ РІРѕР·СЊРјРё!")
+                        .replaceAll("[6Р±b]Р»СЏ.*", "Р±Р»РёРЅ ")
+                        .replaceAll("[3Р·z][aР°].[Сѓy][pСЂРї].*", "РїРёСЃСЊРєР°")
+                        .replaceAll("[eРµ][6Р±]Р».*", "РµРїР°СЂР°СЃРµС‚Рµ ")
+                        .replaceAll("[3Р·z][aР°][eРµС‘][6Р±b].*", "РЅР°РґРѕРµР»Рѕ СЌС‚Рѕ РІСЃС‘! ")
+                        .replaceAll("[dРґ][Р°Рѕ].[6Р±b][Р°Рѕ][РµС‘][6Р±b].*", "РґСѓСЂР°С‡РѕРє) ")
+                        .replaceAll(".*[РµС‘][6Р±b].*", "***")
+                        .replaceAll("[xС…][eРµ][СЂp]", "С…СЂРµРЅ");
                 event.setMessage(modifiedMessage);
             }
         }
