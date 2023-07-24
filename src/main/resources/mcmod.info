@@ -1,0 +1,16 @@
+[
+{
+  "modid": "shakespeare",
+  "name": "ShakespeareMod",
+  "description": "This mod allows you to avoid getting punished for swearing if you accidentally type them in the chat.",
+  "version": "1.0",
+  "mcversion": "${mcversion}",
+  "url": "https://teslacraft.org/donate/",
+  "updateUrl": "",
+  "authorList": ["JixCan"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
