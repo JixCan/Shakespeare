@@ -50,11 +50,11 @@ public class ShakespeareMod {
                 String originalMessage = event.getMessage();
                 String modifiedMessage = originalMessage.toLowerCase()
                         .replaceAll("[xх][уy]й", "писюн")
-                        .replaceAll("[pрп][иi][3зz][dд][aа]", "писька")
-                        .replaceAll("[xх][уy][eеё][вВ].*", "плоховатенько")
+                        .replaceAll("[pрп][иiu][3зz][dд][aа]", "писька")
+                        .replaceAll("[xх][уy][eеё]в.*", "плоховатенько")
                         .replaceAll("[aаоo0][xх][уy][её].*", "мегахорош")
                         .replaceAll("[eе][6бb][aа].*", "ОГО!")
-                        .replaceAll("[pрп][иi][3з][dд][eе]*.", "ёколомоне")
+                        .replaceAll("[pрп][иiu][3з][dд][eе]*.", "ёколомоне")
                         .replaceAll("[сc][уy][кk].*", "чёрт возьми!")
                         .replaceAll("[6бb]ля.*", "блин ")
                         .replaceAll("[3зz][aа].[уy][pрп].*", "писька")
@@ -62,7 +62,12 @@ public class ShakespeareMod {
                         .replaceAll("[3зz][aа][eеё][6бb].*", "надоело это всё! ")
                         .replaceAll("[dд][ао].[6бb][ао][её][6бb].*", "дурачок) ")
                         .replaceAll(".*[её][6бb].*", "***")
-                        .replaceAll("[xх][eе][рp]", "хрен");
+                        .replaceAll("[xх][eе][рp]", "хрен")
+                        .replaceAll("ш[aа][лl][aа]в[aа]", "девушка лёгкого поведения")
+                        .replaceAll("ш[лl]ю[хx].*", "девушка лёгкого поведения")
+                        .replaceAll(".*[xх][уy]й", "как-то неважно...")
+                        .replaceAll("[mм][уy][dд][aа][кk]", "нехороший человек")
+                        .replaceAll("[pрп][иiu][dд].*[рp].*", "очень нехороший человек");
                 event.setMessage(modifiedMessage);
             }
         }
