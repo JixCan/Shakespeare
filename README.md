@@ -6,8 +6,7 @@
 ### Требования
 * Forge версии 1.12.2.
 
-#### Тема на форуме TeslaCraft:
-https://teslacraft.org/threads/444682/
+#### Тема на форуме TeslaCraft: https://teslacraft.org/threads/444682/
 
 #### Приятной игры!
 
